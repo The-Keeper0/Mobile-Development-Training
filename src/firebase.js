@@ -13,7 +13,7 @@ const firebaseConfig = {
   storageBucket: "mobile-training-tracker.firebasestorage.app",
   messagingSenderId: "276309460612",
   appId: "1:276309460612:web:3c597f6b0eac2a1c6964d1",
-  measurementId: "G-ZEJ5XQ5ZYL",
+  measurementId: "G-ZEJ5XQ5ZYL"
 };
 
 // Initialize Firebase
