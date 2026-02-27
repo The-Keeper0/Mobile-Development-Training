@@ -12,18 +12,68 @@ const MEMBERS = [
     role: "UI/UX & Frontend",
     color: "#2563EB",
     icon: "🎨",
-    tasks: [
-      { id: "a1", day: "Day 1", week: 1, label: "Install Android Studio and run the default Hello World app on your phone or emulator" },
-      { id: "a2", day: "Day 2", week: 1, label: "Design a Login screen with an email field, password field, and a Login button — make it look neat" },
-      { id: "a3", day: "Day 3", week: 1, label: "Add a print message that appears in the log when the app opens, goes to background, and comes back" },
-      { id: "a4", day: "Day 4", week: 1, label: "Make the Login button open a new Home screen, and pass the typed email to display on that screen" },
-      { id: "a5", day: "Day 5", week: 1, label: "Build an app with a bottom navigation bar that switches between 3 tabs: Home, List, and Profile" },
-      { id: "a6", day: "Day 6", week: 2, label: "Display a scrollable list of 10 sample items (e.g. student names) on the List tab" },
-      { id: "a7", day: "Day 7", week: 2, label: "Replace the sample list with real data loaded from the database — coordinate with Member C" },
-      { id: "a8", day: "Day 8", week: 2, label: "Build an Add Item form with a text field, a dropdown, and a date picker — show an error if left empty" },
-      { id: "a9", day: "Day 9", week: 2, label: "Polish the app — add consistent colors, rounded buttons, and make it look like a real app" },
-      { id: "a10", day: "Day 10", week: 2, label: "Connect all screens so the full app works: login opens home, home shows list, list lets you add items" },
-    ],
+tasks: [
+  { 
+    id: "a1", 
+    day: "Day 1", 
+    week: 1, 
+    label: "Create a clean Login screen UI with an email field, password field, and Login button. Make sure spacing and alignment look good." 
+  },
+  { 
+    id: "a2", 
+    day: "Day 2", 
+    week: 1, 
+    label: "Improve the Login screen (Email Field, Password Field, & Log-in Button) design by adding rounded corners, better colors, and proper padding." 
+  },
+  { 
+    id: "a3", 
+    day: "Day 3", 
+    week: 1, 
+    label: "Design a Home screen UI with a welcome text, three summary boxes, and a Logout button." 
+  },
+  { 
+    id: "a4", 
+    day: "Day 4", 
+    week: 1, 
+    label: "Design a List screen with a Search bar at the top and three filter buttons: All, Vegetables, Fruits." 
+  },
+  { 
+    id: "a5", 
+    day: "Day 5", 
+    week: 1, 
+    label: "Create a simple item card layout that shows crop name, category, quantity, and date." 
+  },
+  { 
+    id: "a6", 
+    day: "Day 6", 
+    week: 2, 
+    label: "Improve the Search bar UI by adding a search icon and a clear (X) button." 
+  },
+  { 
+    id: "a7", 
+    day: "Day 7", 
+    week: 2, 
+    label: "Design a simple dropdown UI for sorting with options: Newest, Oldest, Highest Quantity." 
+  },
+  { 
+    id: "a8", 
+    day: "Day 8", 
+    week: 2, 
+    label: "Create an Add Item screen UI with text fields, a dropdown, a date picker, and a Save button." 
+  },
+  { 
+    id: "a9", 
+    day: "Day 9", 
+    week: 2, 
+    label: "Add a simple loading screen and an empty list message that says 'No items found'." 
+  },
+  { 
+    id: "a10", 
+    day: "Day 10", 
+    week: 2, 
+    label: "Make sure all screens use the same colors, button style, and spacing so the app looks consistent." 
+  },
+],
   },
   {
     id: "memberB",
