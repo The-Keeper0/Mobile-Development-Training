@@ -28,21 +28,71 @@ const MEMBERS = [
   {
     id: "memberB",
     name: "Member B",
-    role: "Backend & API",
+    role: "Login, Search & Filters",
     color: "#059669",
     icon: "⚙️",
-    tasks: [
-      { id: "b1", day: "Day 1", week: 1, label: "Install Android Studio, create a new project, and make the app show the text 'Hello, I am Member B!' on screen" },
-      { id: "b2", day: "Day 2", week: 1, label: "Open a browser and go to jsonplaceholder.typicode.com/users — read what you see and write down what each field means (id, name, email, etc.)" },
-      { id: "b3", day: "Day 3", week: 1, label: "Add 2 lines to build.gradle to install Retrofit, sync the project, and confirm Android Studio does not show any errors" },
-      { id: "b4", day: "Day 4", week: 1, label: "Write code that contacts jsonplaceholder.typicode.com/users and prints the first user name in the log when the app opens" },
-      { id: "b5", day: "Day 5", week: 1, label: "Create a User class with fields: id, name, and email — make Retrofit fill it automatically from the server response" },
-      { id: "b6", day: "Day 6", week: 2, label: "Move the internet call to a background task so a loading spinner shows while waiting and the screen does not freeze" },
-      { id: "b7", day: "Day 7", week: 2, label: "After a successful data fetch, save the user name to the phone so it still shows even after closing and reopening the app" },
-      { id: "b8", day: "Day 8", week: 2, label: "Turn off your phone Wi-Fi, open the app, and make sure it shows a message like 'No internet connection' instead of crashing" },
-      { id: "b9", day: "Day 9", week: 2, label: "Build a screen with an email and password field — when submitted, print 'Login success' or 'Wrong credentials' in the log" },
-      { id: "b10", day: "Day 10", week: 2, label: "Pass the fetched user list to Member A so it appears in the scrollable list screen — test it together" },
-    ],
+tasks: [
+  { 
+    id: "b1", 
+    day: "Day 1", 
+    week: 1, 
+    label: "Create a new mobile app project and make the first screen a Login screen with a username field, a password field, and a Login button" 
+  },
+  { 
+    id: "b2", 
+    day: "Day 2", 
+    week: 1, 
+    label: "Make the Login button functional: if username is 'farmer' and password is '1234', navigate to the Home screen — otherwise display a red message saying 'Wrong username or password'" 
+  },
+  { 
+    id: "b3", 
+    day: "Day 3", 
+    week: 1, 
+    label: "Add a Logout button on the Home screen — when tapped, navigate back to the Login screen and clear both username and password fields" 
+  },
+  { 
+    id: "b4", 
+    day: "Day 4", 
+    week: 1, 
+    label: "Create an Add Harvest screen and validate the form before saving: if crop name is empty or quantity is zero, show a red error message under the invalid field and prevent saving" 
+  },
+  { 
+    id: "b5", 
+    day: "Day 5", 
+    week: 1, 
+    label: "On the Harvest List screen, add three filter buttons at the top: All, Vegetables, Fruits — when one is selected, display only items that match that category" 
+  },
+  { 
+    id: "b6", 
+    day: "Day 6", 
+    week: 2, 
+    label: "Add a search bar above the harvest list — as the user types a crop name, update the list instantly to show only matching results" 
+  },
+  { 
+    id: "b7", 
+    day: "Day 7", 
+    week: 2, 
+    label: "Make search and category filtering work together — for example, selecting Fruits and typing 'man' should display only fruit items whose names contain 'man' such as Mango" 
+  },
+  { 
+    id: "b8", 
+    day: "Day 8", 
+    week: 2, 
+    label: "Add a sorting dropdown to the list with options: Newest First, Oldest First, and Highest Quantity — selecting one should reorder the list correctly" 
+  },
+  { 
+    id: "b9", 
+    day: "Day 9", 
+    week: 2, 
+    label: "Add a Summary section above the list that dynamically displays: total vegetables harvested, total fruits harvested, and total number of crops recorded" 
+  },
+  { 
+    id: "b10", 
+    day: "Day 10", 
+    week: 2, 
+    label: "Perform a full system test: log in, add five harvest entries of mixed categories, search for one item, filter by Fruits, sort by Highest Quantity, and verify that the summary totals update correctly" 
+  },
+],
   },
   {
     id: "memberC",
@@ -66,10 +116,10 @@ const MEMBERS = [
 ];
 
 const INTEGRATION_MILESTONES = [
-  { day: "Day 5",  label: "Team Check-in",    desc: "Each member shows what they built — screens, API calls, and database", members: ["A","B","C"] },
-  { day: "Day 7",  label: "A + C Connect",    desc: "Member A list screen loads real data from Member C database",          members: ["A","C"] },
-  { day: "Day 9",  label: "A + B Connect",    desc: "Member A screens display live data fetched by Member B from the server", members: ["A","B"] },
-  { day: "Day 10", label: "Full App Sprint",  desc: "All 3 members plug their parts together into one working mini-app",    members: ["A","B","C"] },
+  { day: "Day 5",  label: "Team Check-in",    desc: "Member A shows screens, Member B shows login + category filter, Member C shows working database", members: ["A","B","C"] },
+  { day: "Day 7",  label: "A + C Connect",    desc: "Member A list screen now shows real harvests loaded from Member C database",                      members: ["A","C"] },
+  { day: "Day 9",  label: "A + B Connect",    desc: "Search bar, category filter, sort, and summary totals all work inside Member A screens",          members: ["A","B"] },
+  { day: "Day 10", label: "Full App Sprint",  desc: "Log in, add harvests, search, filter by category, sort the list, check totals — all working",     members: ["A","B","C"] },
 ];
 
 // ─────────────────────────────────────────────
