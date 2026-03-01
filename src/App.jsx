@@ -47,7 +47,7 @@ tasks: [
     id: "a6", 
     day: "Day 6", 
     week: 2, 
-    label: "Improve the Search bar UI by adding a search icon and a clear (X) button." 
+    label: "Improve the Search bar UI by adding a search icon and a clear (X) button. Also add another page for Inventory System, where the user/farmer can add products, and quantity of it." 
   },
   { 
     id: "a7", 
@@ -104,7 +104,7 @@ tasks: [
     id: "b4", 
     day: "Day 4", 
     week: 1, 
-    label: "Create an Add Harvest screen and validate the form before saving: if crop name is empty or quantity is zero, show a red error message under the invalid field and prevent saving" 
+    label: "Add a 'Harvest' screen with form validation: show red errors if the crop name is blank or quantity is zero. Also, show a success message after a user signs up." 
   },
   { 
     id: "b5", 
@@ -116,7 +116,7 @@ tasks: [
     id: "b6", 
     day: "Day 6", 
     week: 2, 
-    label: "Add a search bar above the harvest list — as the user types a crop name, update the list instantly to show only matching results" 
+    label: "Add a search bar above the harvest list — as the user types a crop name, update the list instantly to show only matching results. Also, ensure the harvest cards instantly reflect data updates, like stock changes and dates." 
   },
   { 
     id: "b7", 
@@ -150,18 +150,77 @@ tasks: [
     role: "Database & Storage",
     color: "#D97706",
     icon: "🗄️",
-    tasks: [
-      { id: "c1", day: "Day 1", week: 1, label: "Install Android Studio and draw a diagram of the app database — what tables and columns are needed" },
-      { id: "c2", day: "Day 2", week: 1, label: "Create the actual database inside the app with a Users table (id, name, email) — confirm it launches" },
-      { id: "c3", day: "Day 3", week: 1, label: "Write code to save a new user into the database, then read all users back and print them in the log" },
-      { id: "c4", day: "Day 4", week: 1, label: "Write code to edit an existing user name and to delete a user — test both and confirm they work" },
-      { id: "c5", day: "Day 5", week: 1, label: "Loop through all saved users and display each person name and email in the log, one line at a time" },
-      { id: "c6", day: "Day 6", week: 2, label: "Switch to Room library — rebuild the same Users table using Room cleaner and more modern approach" },
-      { id: "c7", day: "Day 7", week: 2, label: "Rewrite the save, read, edit, and delete actions using Room so all four operations work correctly" },
-      { id: "c8", day: "Day 8", week: 2, label: "Decide which data gets saved on the phone and which gets fetched fresh from the server each time" },
-      { id: "c9", day: "Day 9", week: 2, label: "Make the app load saved local data instantly when offline, then update it automatically when back online" },
-      { id: "c10", day: "Day 10", week: 2, label: "Supply saved database data to Member A list screen and confirm Member B sync updates the local copy" },
-    ],
+tasks: [
+  { 
+    id: "c1", 
+    day: "Day 1", 
+    week: 1, 
+    label: "Install Android Studio and draw a complete database diagram including two tables: Users (id, username, password) and Harvest (id, cropName, category, quantity, date)." 
+  },
+
+  { 
+    id: "c2", 
+    day: "Day 2", 
+    week: 1, 
+    label: "Create the actual database inside the app with Users and Harvest tables. Confirm the app launches successfully with the database connected." 
+  },
+
+  { 
+    id: "c3", 
+    day: "Day 3", 
+    week: 1, 
+    label: "Write code to insert a new harvest record into the database, then read all harvest records and print them in the log to confirm saving works." 
+  },
+
+  { 
+    id: "c4", 
+    day: "Day 4", 
+    week: 1, 
+    label: "Write code to update an existing harvest record (change quantity or date) and delete a harvest record. Test both and confirm they work correctly." 
+  },
+
+  { 
+    id: "c5", 
+    day: "Day 5", 
+    week: 1, 
+    label: "Create database functions to retrieve harvest records by category (Vegetables or Fruits) and retrieve all harvest records for display in the list screen." 
+  },
+
+  { 
+    id: "c6", 
+    day: "Day 6", 
+    week: 2, 
+    label: "Switch to Room library and rebuild both Users and Harvest tables using Entities, DAOs, and a Room Database class for a cleaner and modern database structure." 
+  },
+
+  { 
+    id: "c7", 
+    day: "Day 7", 
+    week: 2, 
+    label: "Rewrite all database operations using Room (insert, read, update, delete) for both Users and Harvest. Ensure filter by category, search by crop name, and sorting queries work correctly." 
+  },
+
+  { 
+    id: "c8", 
+    day: "Day 8", 
+    week: 2, 
+    label: "Create Room query functions for summary calculations: total vegetables quantity, total fruits quantity, and total number of harvest records." 
+  },
+
+  { 
+    id: "c9", 
+    day: "Day 9", 
+    week: 2, 
+    label: "Make the app load saved local harvest data instantly using Room. Simulate offline behavior and ensure data still displays without internet." 
+  },
+
+  { 
+    id: "c10", 
+    day: "Day 10", 
+    week: 2, 
+    label: "Connect the Room database to Member A’s list screen and confirm that Member B’s features (add, search, filter, sort, and summary updates) correctly modify and display the updated local database data." 
+  },
+],
   },
 ];
 
